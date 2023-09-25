@@ -12,6 +12,7 @@
     "@types/node": "20.6.5",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
+    "classnames": "^2.3.2",
     "eslint": "8.50.0",
     "eslint-config-next": "13.5.2",
     "next": "13.5.2",
@@ -20,6 +21,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "sass": "^1.68.0"
   }
 }
