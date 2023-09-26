@@ -1,3 +1,9 @@
+import Container from './components/Container';
+
 export default function Home() {
-  return <div>테스트</div>;
+  return (
+    <Container>
+      <div>테스트</div>
+    </Container>
+  );
 }
