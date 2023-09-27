@@ -14,10 +14,10 @@ const Logo = () => {
     <Image
       onClick={() => router.push('/')}
       alt="Logo"
-      className={cx('Logo')}
+      className={cx('logo')}
       height="60"
       width="100"
-      src="/images/airbnb-logo2.png"
+      src="/images/airbnb-logo.png"
     />
   );
 };

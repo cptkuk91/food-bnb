@@ -14,16 +14,14 @@ const cx = classNames.bind(styles);
 
 const Navbar = (props: Props) => {
   return (
-    <div className={cx('Second')}>
-      <Container>
-        <div className={cx('Header')}>
-          <Logo />
-          {/* Search */}
-          <Search />
-          {/* Menu */}
-          <Menu />
-        </div>
-      </Container>
+    <div className={cx('container')}>
+      <div className={cx('header')}>
+        <Logo />
+        {/* Search */}
+        <Search />
+        {/* Menu */}
+        <Menu />
+      </div>
     </div>
   );
 };
