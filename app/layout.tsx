@@ -2,6 +2,11 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
+import classNames from 'classnames/bind';
+
+import styles from './styles/global.module.scss';
+
+const cx = classNames.bind(styles);
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,10 +18,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ClientOnly>
-          <Navbar />
-        </ClientOnly>
+      <body className={cx([inter.className, 'body'])}>
+        {/* <ClientOnly> */}
+        <Navbar />
+        {/* </ClientOnly> */}
         <div>{children}</div>
       </body>
     </html>

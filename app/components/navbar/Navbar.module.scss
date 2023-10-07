@@ -1,13 +1,16 @@
-.Second {
+.container {
   padding-top: 16px;
   padding-bottom: 16px;
+  padding-left: 72px;
+  padding-right: 72px;
   border-bottom-width: 1px;
-}
+  border-bottom: 1px solid #ebebeb;
 
-.Header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
 }

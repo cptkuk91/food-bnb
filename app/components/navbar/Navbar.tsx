@@ -3,7 +3,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './Navbar.module.scss';
-import Container from '../Container';
 import Logo from './Logo';
 import Search from './Search';
 import Menu from './Menu';
@@ -14,16 +13,14 @@ const cx = classNames.bind(styles);
 
 const Navbar = (props: Props) => {
   return (
-    <div className={cx('Second')}>
-      <Container>
-        <div className={cx('Header')}>
-          <Logo />
-          {/* Search */}
-          <Search />
-          {/* Menu */}
-          <Menu />
-        </div>
-      </Container>
+    <div className={cx('container')}>
+      <div className={cx('header')}>
+        <Logo />
+        {/* Search */}
+        <Search />
+        {/* Menu */}
+        <Menu />
+      </div>
     </div>
   );
 };
