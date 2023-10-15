@@ -5,21 +5,7 @@
   gap: 0.7rem;
   position: relative;
 
-  > span {
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    border-radius: 9999px;
-    padding: 8px 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-      background-color: #ebebeb;
-    }
-  }
-
-  .global {
+  > .language {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -32,8 +18,7 @@
       background-color: #ebebeb;
     }
   }
-
-  .userMenu {
+  > .menu {
     font-size: 1.2rem;
     display: flex;
     align-items: center;

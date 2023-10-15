@@ -20,10 +20,10 @@ function Menu({}: Props) {
   };
   return (
     <div className={cx('container')}>
-      <div className={cx('global')} onClick={openModal}>
+      <div className={cx('language')} onClick={openModal}>
         <AiOutlineGlobal />
       </div>
-      <div className={cx('userMenu')}>
+      <div className={cx('menu')}>
         <AiOutlineMenu />
         <AiOutlineUser />
       </div>
