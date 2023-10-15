@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.container:hover {
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 정의 */
+  transition: box-shadow 0.3s ease; /* 부드러운 전환 효과를 주기 위해 transition 속성 사용 */
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  padding: 0.7rem 1.2rem;
+  border-radius: 9999px;
+  position: relative;
+  z-index: 1;
+
+  .bar-color {
+    color: #ebebeb; // | 표시의 색상을 변경할 수 있습니다.
+  }
+
+  .search-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    .searchIconStyle {
+      color: red;
+    }
+
+    span {
+      color: #999999; // 텍스트의 색상을 #ebebeb로 설정합니다.
+      font-weight: normal;
+    }
+  }
+
+  div {
+    font-size: 14px; // 어디든지와 게스트 추가의 텍스트 크기를 조정합니다.
+    font-weight: 500;
+  }
+}

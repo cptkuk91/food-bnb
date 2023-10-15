@@ -15,7 +15,7 @@ const Logo = () => {
       onClick={() => router.push('/')}
       alt="Logo"
       className={cx('logo')}
-      height="60"
+      height="32"
       width="100"
       src="/images/airbnb-logo.png"
     />

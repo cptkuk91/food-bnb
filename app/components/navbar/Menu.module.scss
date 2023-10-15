@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  position: relative;
+
+  > .language {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 6px 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+  > .menu {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ebebeb;
+    border-radius: 9999px;
+    padding: 8px;
+    gap: 8px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      border-radius: 9999px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 그림자 효과 정의 */
+      transition: box-shadow 0.3s ease; /* 부드러운 전환 효과를 주기 위해 transition 속성 사용 */
+    }
+  }
+}

@@ -3,7 +3,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './Navbar.module.scss';
-import Container from '../Container';
 import Logo from './Logo';
 import Search from './Search';
 import Menu from './Menu';
