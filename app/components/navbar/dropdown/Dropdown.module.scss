@@ -1,0 +1,32 @@
+/* Dropdown.module.scss */
+
+.dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px 0;
+  width: 250px; /* 변경된 너비 */
+  z-index: 1;
+  top: 100%; /* Menu 아래에 위치하도록 설정 */
+  right: 0; /* 오른쪽 정렬을 원하면 설정, 필요에 따라 수정 */
+  margin-top: 8px;
+  border-radius: 0.5rem;
+}
+
+.item {
+  cursor: pointer;
+  font-size: small;
+  padding: 8px 12px;
+  &:first-child {
+    font-weight: bold;
+  }
+  &:hover {
+    background-color: #ebebeb; /* 마우스를 올렸을 때 배경색 변경 */
+  }
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #ebebeb;
+  margin: 8px 0;
+}
