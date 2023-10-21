@@ -1,14 +1,12 @@
-/* Dropdown.module.scss */
-
 .dropdown {
   position: absolute;
   background-color: white;
   border: 1px solid #ccc;
   padding: 10px 0;
-  width: 250px; /* 변경된 너비 */
+  width: 250px;
   z-index: 1;
-  top: 100%; /* Menu 아래에 위치하도록 설정 */
-  right: 0; /* 오른쪽 정렬을 원하면 설정, 필요에 따라 수정 */
+  top: 100%;
+  right: 0;
   margin-top: 8px;
   border-radius: 0.5rem;
 }

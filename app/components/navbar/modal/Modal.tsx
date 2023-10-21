@@ -32,28 +32,31 @@ const Modal: React.FC<ModalProps> = ({ isOpen, close }) => {
   };
 
   return (
-    <div className={cx('container')} onClick={handleCloseOnOverlayClick}>
-      <div className={cx('modalContent')}>
-        <button className={cx('button')} onClick={close}>
-          X
-        </button>
-        <p className={cx('language')}>언어와 지역</p>
-        <hr />
-        <h2>언어와 지역을 선택하세요</h2>
+    isOpen && (
+      <div className={cx('container')} onClick={handleCloseOnOverlayClick}>
+        <div className={cx('overlay')} onClick={close}></div>
+        <div className={cx('modalContent')}>
+          <button className={cx('button')} onClick={close}>
+            X
+          </button>
+          <p className={cx('language')}>언어와 지역</p>
+          <hr />
+          <h2>언어와 지역을 선택하세요</h2>
 
-        <div className={cx('languageOptionsContainer')}>
-          {languageOptions.map(({ language, region }) => (
-            <div
-              key={language}
-              className={cx('languageOption', { selected: language === selectedLanguage })}
-              onClick={() => handleSelectLanguage(language)}>
-              <div className={cx('selectedLanguage')}>{language}</div>
-              <div className={cx('region')}>{region}</div>
-            </div>
-          ))}
+          <div className={cx('languageOptionsContainer')}>
+            {languageOptions.map(({ language, region }) => (
+              <div
+                key={language}
+                className={cx('languageOption', { selected: language === selectedLanguage })}
+                onClick={() => handleSelectLanguage(language)}>
+                <div className={cx('selectedLanguage')}>{language}</div>
+                <div className={cx('region')}>{region}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    )
   );
 };
 
