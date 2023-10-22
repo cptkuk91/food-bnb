@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Navbar from './components/navbar/Navbar';
 import ClientOnly from './components/ClientOnly';
 import classNames from 'classnames/bind';
+import Main from '../app/components/main/Card';
 
 import styles from './styles/global.module.scss';
 
@@ -19,9 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={cx([inter.className, 'body'])}>
-        {/* <ClientOnly> */}
-        <Navbar />
-        {/* </ClientOnly> */}
+        <ClientOnly>
+          <Navbar />
+        </ClientOnly>
         <div>{children}</div>
       </body>
     </html>
