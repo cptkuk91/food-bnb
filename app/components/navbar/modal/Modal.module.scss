@@ -39,65 +39,60 @@
         background-color: #ebebeb;
       }
     }
-
-    .language {
+    > .language {
       align-self: flex-start;
       padding: 10px 20px;
       margin: 10px;
       font-size: medium;
       font-weight: bold;
     }
-
     hr {
       border: none;
       height: 1px;
       background-color: #ebebeb;
       margin: 0 20px 10px;
     }
-
     h2 {
       align-self: flex-start;
       padding: 10px 20px;
       margin: 10px;
     }
-
-    .languageOptionsContainer {
+    > .languageOptionsContainer {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-    }
 
-    .languageOption {
-      margin-left: 25px;
-      margin-right: 25px;
+      > .languageOption {
+        margin-left: 25px;
+        margin-right: 25px;
 
-      .selectedLanguage {
-        font-size: medium;
-        align-self: flex-start;
+        > .selectedLanguage {
+          font-size: medium;
+          align-self: flex-start;
 
-        padding-left: 20px;
-        padding-right: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
 
-        margin-top: 5px;
-      }
+          margin-top: 5px;
+        }
+        > .region {
+          font-size: small;
+          color: gray;
+          align-self: flex-start;
 
-      .region {
-        font-size: small;
-        color: gray;
-        align-self: flex-start;
+          padding-left: 20px;
+          padding-right: 20px;
 
-        padding-left: 20px;
-        padding-right: 20px;
+          margin-bottom: 5px;
+        }
 
-        margin-bottom: 5px;
-      }
-
-      &.selected {
-        border: solid gray thin;
-        border-radius: 0.5rem;
-      }
-      &:hover {
-        border-radius: 0.5rem;
-        background-color: #ebebeb;
+        &.selected {
+          border: solid gray thin;
+          border-radius: 0.5rem;
+        }
+        &:hover {
+          border-radius: 0.5rem;
+          background-color: #ebebeb;
+        }
       }
     }
   }

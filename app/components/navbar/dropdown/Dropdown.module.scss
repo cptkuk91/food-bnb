@@ -1,4 +1,4 @@
-.dropdown {
+.container {
   position: absolute;
   background-color: white;
   border: 1px solid #ccc;
@@ -9,22 +9,22 @@
   right: 0;
   margin-top: 8px;
   border-radius: 0.5rem;
-}
 
-.item {
-  cursor: pointer;
-  font-size: small;
-  padding: 8px 12px;
-  &:first-child {
-    font-weight: bold;
-  }
-  &:hover {
-    background-color: #ebebeb; /* 마우스를 올렸을 때 배경색 변경 */
-  }
-}
+  > .item {
+    cursor: pointer;
+    font-size: small;
+    padding: 8px 12px;
 
-.separator {
-  border: none;
-  border-top: 1px solid #ebebeb;
-  margin: 8px 0;
+    &:first-child {
+      font-weight: bold;
+    }
+    &:hover {
+      background-color: #ebebeb;
+    }
+  }
+  > .separator {
+    border: none;
+    border-top: 1px solid #ebebeb;
+    margin: 8px 0;
+  }
 }

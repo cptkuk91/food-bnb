@@ -23,7 +23,7 @@ const Dropdown: React.FC<DropdownProps> = ({ close }) => {
   }, [close]);
 
   return (
-    <div className={cx('dropdown')} ref={dropdownRef}>
+    <div className={cx('container')} ref={dropdownRef}>
       <div className={cx('item')}>회원 가입</div>
       <div className={cx('item')}>로그인</div>
       <hr className={cx('separator')} />
