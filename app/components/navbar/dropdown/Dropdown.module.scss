@@ -22,7 +22,9 @@
       background-color: #ebebeb;
     }
   }
+  // 불필요한 css 코드 같으니까, 확인해보고 설정 변경하기
   > .separator {
+    // 이거 2개를 제거하고, color만 줘보기, hr자체가 선이다.
     border: none;
     border-top: 1px solid #ebebeb;
     margin: 8px 0;
