@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Navbar from './components/navbar/Navbar';
 import classNames from 'classnames/bind';
-import Main from '../app/components/main/Card';
+import ClientOnly from './components/ClientOnly';
 
 import styles from './styles/global.module.scss';
 
