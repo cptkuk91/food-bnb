@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Navbar from './components/navbar/Navbar';
 import classNames from 'classnames/bind';
 import GoogleAnalytics from './components/GoogleAnalytics';
+import { ClerkProvider } from '@clerk/nextjs';
 
 import styles from './styles/global.module.scss';
 
@@ -17,14 +18,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={cx([inter.className, 'body'])}>
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-        ) : null}
-        <Navbar />
-        <div>{children}</div>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={cx([inter.className, 'body'])}>
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
+          <Navbar />
+          <div>{children}</div>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
