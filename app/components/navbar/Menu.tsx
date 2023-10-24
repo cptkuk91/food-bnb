@@ -4,6 +4,8 @@ import styles from './Menu.module.scss';
 import { AiOutlineGlobal, AiOutlineUser, AiOutlineMenu } from 'react-icons/ai';
 import Modal from './modal/Modal';
 import Dropdown from './dropdown/Dropdown';
+import AfterLoginDropdown from './dropdown/AfterLoginDropdown';
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
 type Props = {};
 
@@ -32,8 +34,14 @@ function Menu({}: Props) {
       </div>
       <div className={cx('menu')} onClick={toggleDropdown}>
         <AiOutlineMenu />
-        <AiOutlineUser />
-        {dropdownOpen && <Dropdown close={toggleDropdown} />}
+        <SignedIn>
+          <UserButton />
+          {dropdownOpen && <AfterLoginDropdown close={toggleDropdown} />}
+        </SignedIn>
+        <SignedOut>
+          <AiOutlineUser />
+          {dropdownOpen && <Dropdown close={toggleDropdown} />}
+        </SignedOut>
       </div>
 
       <Modal isOpen={modalOpen} close={closeModal} />

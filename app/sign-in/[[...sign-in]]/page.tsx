@@ -1,5 +1,13 @@
 import { SignIn } from '@clerk/nextjs';
+import classNames from 'classnames/bind';
+import styles from './page.module.scss';
+
+const cx = classNames.bind(styles);
 
 export default function Page() {
-  return <SignIn />;
+  return (
+    <div className={cx('container')}>
+      <SignIn />
+    </div>
+  );
 }
