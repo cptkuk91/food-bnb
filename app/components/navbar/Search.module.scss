@@ -12,7 +12,7 @@
   transition: box-shadow 0.3s ease; /* 부드러운 전환 효과를 주기 위해 transition 속성 사용 */
 }
 
-.button-container {
+.button {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,11 +23,11 @@
   border-radius: 9999px;
   position: relative;
 
-  .bar-color {
+  .bar {
     color: #ebebeb; // | 표시의 색상을 변경할 수 있습니다.
   }
 
-  .search-icon {
+  .searchIcon {
     display: flex;
     flex-direction: row;
     align-items: center;
