@@ -28,20 +28,21 @@
   }
 
   .searchIcon {
+    width: 120px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 10px;
 
-    .searchIconStyle {
-      color: red;
-    }
-
     span {
-      color: #999999; // 텍스트의 색상을 #ebebeb로 설정합니다.
+      color: #999999;
       font-weight: normal;
     }
+  }
+
+  .searchIconStyle {
+    color: red;
   }
 
   div {

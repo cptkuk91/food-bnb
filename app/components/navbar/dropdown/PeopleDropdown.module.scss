@@ -1,0 +1,70 @@
+.container {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  z-index: 1;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  > .separator {
+    // 이거 2개를 제거하고, color만 줘보기, hr자체가 선이다.
+    border: none;
+    border-top: 1px solid #ebebeb;
+    margin: 8px 0;
+  }
+
+  > .link {
+    font-size: small;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  > .adult {
+    display: flex;
+    justify-content: space-between;
+
+    > .people {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      margin-bottom: 10px;
+
+      > .ageInfo {
+        font-size: x-small;
+        color: gray;
+        margin-left: 10px;
+      }
+    }
+
+    > .math {
+      display: flex;
+      align-items: center;
+
+      > .button {
+        padding: 8px 12px;
+        font-size: 12px;
+        cursor: pointer;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 100%;
+
+        &:hover {
+          border: 1px solid black;
+        }
+      }
+
+      > .count {
+        font-size: 18px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
