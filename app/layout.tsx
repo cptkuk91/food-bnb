@@ -6,6 +6,7 @@ import GoogleAnalytics from './components/GoogleAnalytics';
 import { ClerkProvider } from '@clerk/nextjs';
 
 import styles from './styles/global.module.scss';
+import Footer from './components/footer/Footer';
 
 const cx = classNames.bind(styles);
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ) : null}
           <Navbar />
           <div>{children}</div>
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
