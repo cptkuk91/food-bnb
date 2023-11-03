@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  gap: 20px;
+
+  > .language {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  > .socialMedia {
+    display: flex;
+    gap: 20px;
+
+    > .image {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

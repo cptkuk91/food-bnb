@@ -5,16 +5,32 @@ import './Tab.module.scss';
 import classNames from 'classnames/bind';
 import styles from './Tab.module.scss';
 
+const menuArr = [
+  {
+    name: '서울',
+    content: [
+      '강남구',
+      '용산구',
+      '도봉구',
+      '이태원',
+      '홍대',
+      '관악구',
+      '강남구',
+      '용산구',
+      '도봉구',
+      '이태원',
+      '홍대',
+      '관악구',
+    ],
+  },
+  { name: '경기', content: ['경기', '경기2', '경기3'] },
+  { name: '인천', content: ['인천', '인천1', '인천2'] },
+];
+
+const cx = classNames.bind(styles);
+
 export const Tab = () => {
   const [currentTab, clickTab] = useState(0);
-
-  const menuArr = [
-    { name: '서울', content: '서울' },
-    { name: '경기', content: '경기' },
-    { name: '인천', content: '인천' },
-  ];
-
-  const cx = classNames.bind(styles);
 
   const selectMenuHandler = (index: number) => {
     clickTab(index);
@@ -32,8 +48,10 @@ export const Tab = () => {
         ))}
       </div>
       <hr className={cx('liner')}></hr>
-      <div className="Desc">
-        <p>{menuArr[currentTab].content}</p>
+      <div className={cx('town')}>
+        {menuArr[currentTab].content.map((item: string) => (
+          <p>{item}</p>
+        ))}
       </div>
     </>
   );

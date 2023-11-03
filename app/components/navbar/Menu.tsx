@@ -5,7 +5,7 @@ import { AiOutlineGlobal, AiOutlineUser, AiOutlineMenu } from 'react-icons/ai';
 import Modal from './modal/Modal';
 import Dropdown from './dropdown/Dropdown';
 import AfterLoginDropdown from './dropdown/AfterLoginDropdown';
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 type Props = {};
 

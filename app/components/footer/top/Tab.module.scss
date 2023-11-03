@@ -38,6 +38,10 @@
   background-color: #dddddd;
 }
 
-.Desc {
-  text-align: center;
+.town {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-between;
+  width: 100%;
+  text-align: start;
 }
