@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import classNames from 'classnames/bind';
-import styles from './SiginIn.module.scss';
+import styles from './page.module.scss';
 import { useRouter } from 'next/navigation';
+import { ImWarning } from 'react-icons/im';
 
 type Props = {};
 
@@ -13,6 +14,7 @@ function SignIn({}: Props) {
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState(null);
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -24,23 +26,26 @@ function SignIn({}: Props) {
 
   const handleLoginClick = async () => {
     try {
-      const response = await fetch('https://test-api.nineright.dev/api/v1/auth/login', {
+      const response = await fetch('http://localhost:3345/user/login', {
         method: 'POST',
-        body: JSON.stringify({ email, password }),
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
-
-      if (data) {
+      if (response.status === 200) {
+        const data = await response.json();
+        localStorage.setItem('token', data.token);
         router.push('/');
+      } else if (response.status === 400) {
+        const data = await response.json();
+        setLoginError(data.message);
       } else {
-        console.log('로그인 실패');
+        console.log('서버 오류');
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('로그인 중 오류 발생', error);
     }
   };
 
@@ -71,11 +76,16 @@ function SignIn({}: Props) {
             LOGIN
           </button>
         </div>
+        {loginError && (
+          <div className={cx('loginError')}>
+            <ImWarning className={cx('icon')} /> {loginError}
+          </div>
+        )}
 
         <div className={cx('signUpBox')}>
-          <div className={cx('needAccount')}>Need an account?</div>
+          <div className={cx('needAccount')}>아직 Food-BNB 회원이 아니신가요?</div>
           <button className={cx('signUpText')} onClick={handleSignUpClick}>
-            Sign Up
+            회원가입
           </button>
         </div>
       </div>
