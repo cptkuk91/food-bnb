@@ -5,7 +5,6 @@ import { AiOutlineGlobal, AiOutlineUser, AiOutlineMenu } from 'react-icons/ai';
 import Modal from './modal/Modal';
 import Dropdown from './dropdown/Dropdown';
 import AfterLoginDropdown from './dropdown/AfterLoginDropdown';
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 
 type Props = {};
 
@@ -33,15 +32,11 @@ function Menu({}: Props) {
         <AiOutlineGlobal />
       </div>
       <div className={cx('menu')} onClick={toggleDropdown}>
+        {/* TODO: 해당 페이지 로그인 후 처리하겠습니다. */}
         <AiOutlineMenu />
-        <SignedIn>
-          <UserButton />
-          {dropdownOpen && <AfterLoginDropdown close={toggleDropdown} />}
-        </SignedIn>
-        <SignedOut>
-          <AiOutlineUser />
-          {dropdownOpen && <Dropdown close={toggleDropdown} />}
-        </SignedOut>
+        {dropdownOpen && <AfterLoginDropdown close={toggleDropdown} />}
+        <AiOutlineUser />
+        {dropdownOpen && <Dropdown close={toggleDropdown} />}
       </div>
 
       <Modal isOpen={modalOpen} close={closeModal} />
