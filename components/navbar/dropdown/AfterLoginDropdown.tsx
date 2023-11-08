@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import classNames from 'classnames/bind';
 import styles from './AfterLoginDropdown.module.scss';
+import { useDispatch } from 'react-redux';
+import { logOut } from '@/redux/features/authSlice';
 
 type DropdownProps = {
   close: () => void;
@@ -9,6 +11,7 @@ type DropdownProps = {
 const cx = classNames.bind(styles);
 
 const Dropdown: React.FC<DropdownProps> = ({ close }) => {
+  const dispatch = useDispatch();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,6 +25,10 @@ const Dropdown: React.FC<DropdownProps> = ({ close }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [close]);
 
+  const handleLogOutClick = async () => {
+    dispatch(logOut());
+  };
+
   return (
     <div className={cx('container')} ref={dropdownRef}>
       <div className={cx('item')}>메시지</div>
@@ -30,6 +37,9 @@ const Dropdown: React.FC<DropdownProps> = ({ close }) => {
       <div className={cx('item')}>위시리스트</div>
       <hr className={cx('separator')} />
       <div className={cx('item')}>도움말 센터</div>
+      <div className={cx('item')} onClick={handleLogOutClick}>
+        로그아웃
+      </div>
     </div>
   );
 };

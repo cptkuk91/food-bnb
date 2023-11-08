@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google';
 import classNames from 'classnames/bind';
 import styles from '../styles/global.module.scss';
+import ReduxProvider from '@/redux/provider';
 
 const cx = classNames.bind(styles);
 
@@ -14,7 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={cx([inter.className, 'body'])}>{children}</body>
+      <body className={cx([inter.className, 'body'])}>
+        <ReduxProvider>{children}</ReduxProvider>
+      </body>
     </html>
   );
 }

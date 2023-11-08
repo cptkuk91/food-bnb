@@ -5,6 +5,10 @@ import classNames from 'classnames/bind';
 import styles from './page.module.scss';
 import { useRouter } from 'next/navigation';
 import { ImWarning } from 'react-icons/im';
+import { useDispatch } from 'react-redux';
+
+import { logIn } from '@/redux/features/authSlice';
+import { AppDispatch } from '@/redux/store';
 
 type Props = {};
 
@@ -15,6 +19,8 @@ function SignIn({}: Props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loginError, setLoginError] = useState(null);
+
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -37,6 +43,7 @@ function SignIn({}: Props) {
       if (response.status === 200) {
         const data = await response.json();
         localStorage.setItem('token', data.token);
+        dispatch(logIn(data.user));
         router.push('/');
       } else if (response.status === 400) {
         const data = await response.json();

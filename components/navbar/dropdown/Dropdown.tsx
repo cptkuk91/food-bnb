@@ -26,7 +26,7 @@ const Dropdown: React.FC<DropdownProps> = ({ close }) => {
   return (
     <div className={cx('container')} ref={dropdownRef}>
       <div className={cx('link')}>
-        <Link href="/sign-in" className={cx('item')}>
+        <Link href="/login" className={cx('item')}>
           로그인
         </Link>
         <Link href="/sign-up" className={cx('item')}>
