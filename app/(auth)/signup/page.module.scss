@@ -1,0 +1,172 @@
+.container {
+  margin: none;
+  padding: 0;
+  background: #212d37;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > .mainBox {
+    width: auto;
+    height: auto;
+
+    > .title {
+      margin-top: 45px;
+      margin-bottom: 40px;
+      color: white;
+      font-size: 36px;
+      text-align: center;
+    }
+
+    > .inputBox {
+      display: grid;
+      margin-left: 55px;
+      margin-right: 55px;
+      width: 460px;
+      height: 45px;
+      padding: 10px 10px 10px 30px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+
+      > .input {
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        border: none;
+        outline: none;
+        color: white;
+        background: #212d37;
+
+        &::placeholder {
+          color: gray;
+        }
+      }
+    }
+
+    .passwordInputBox {
+      display: grid;
+      margin-top: 10px;
+      margin-left: 55px;
+      margin-right: 55px;
+      width: 460px;
+      height: 45px;
+      padding: 10px 10px 10px 30px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+
+      > .passwordInput {
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        border: none;
+        outline: none;
+        color: white;
+        background: #212d37;
+
+        &::placeholder {
+          color: gray;
+        }
+      }
+    }
+
+    .passwordCheckBox {
+      display: grid;
+      margin-top: 10px;
+      margin-left: 55px;
+      margin-right: 55px;
+      width: 460px;
+      height: 45px;
+      padding: 10px 10px 10px 30px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+
+      .passwordCheckInput {
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        border: none;
+        outline: none;
+        color: white;
+        background: #212d37;
+
+        &::placeholder {
+          color: gray;
+        }
+      }
+    }
+
+    .nameBox {
+      display: grid;
+      margin-top: 10px;
+      margin-left: 55px;
+      margin-right: 55px;
+      width: 460px;
+      height: 45px;
+      padding: 10px 10px 10px 30px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+
+      .nameInput {
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%;
+        border: none;
+        outline: none;
+        color: white;
+        background: #212d37;
+
+        &::placeholder {
+          color: gray;
+        }
+      }
+    }
+
+    .signUpBox {
+      display: flex;
+      margin-top: 20px;
+      margin-left: 55px;
+      margin-right: 55px;
+      width: 460px;
+      height: 45px;
+      padding: 10px 10px 10px 30px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      background: rgba(117, 132, 146);
+      cursor: pointer;
+
+      .signUpText {
+        color: #fff;
+        text-align: center;
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 150%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: none;
+      }
+    }
+  }
+  .errorText {
+    border: red;
+    margin-top: 5px;
+    justify-content: center;
+    text-align: center;
+    color: red;
+  }
+}

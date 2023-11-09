@@ -17,6 +17,7 @@ function Menu({}: Props) {
   // ts 사용하면서 useSelecttor 사용을 위해서, useAppSelector로 확장해서 사용중입니다.
   // 해당 내용은 store 맨 아랫줄에서 확인할 수 있다.
   const email = useAppSelector((state) => state.authReducer.value.email);
+  console.log(email);
 
   const openModal = () => {
     setModalOpen(true);

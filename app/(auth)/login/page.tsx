@@ -57,7 +57,7 @@ function SignIn({}: Props) {
   };
 
   const handleSignUpClick = () => {
-    router.push('/sign-up');
+    router.push('/signup');
   };
 
   return (

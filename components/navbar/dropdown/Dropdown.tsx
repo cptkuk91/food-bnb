@@ -29,7 +29,7 @@ const Dropdown: React.FC<DropdownProps> = ({ close }) => {
         <Link href="/login" className={cx('item')}>
           로그인
         </Link>
-        <Link href="/sign-up" className={cx('item')}>
+        <Link href="/signup" className={cx('item')}>
           회원 가입
         </Link>
       </div>
