@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  padding: 0 32px;
+
+  .filter {
+    color: gray;
+    cursor: pointer;
+
+    > .icon {
+      display: flex;
+      justify-content: center;
+    }
+    > .title {
+      margin-top: 8px;
+      text-align: center;
+    }
+  }
+
+  .button {
+    color: gray;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+
+    &.prev {
+      left: -40px;
+    }
+    &.next {
+      right: -40px;
+    }
+  }
+}
