@@ -35,7 +35,7 @@ const Dropdown: React.FC<DropdownProps> = ({ close }) => {
     <div className={cx('container')} ref={dropdownRef}>
       {email && (
         <>
-          <div className={cx('item')}>메시지</div>
+          <div className={cx('item')}>글쓰기</div>
           <div className={cx('item')}>알림</div>
           <div className={cx('item')}>맛집</div>
           <div className={cx('item')}>위시리스트</div>
