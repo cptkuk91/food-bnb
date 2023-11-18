@@ -1,0 +1,376 @@
+.container {
+  padding: 0 400px;
+
+  > .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > .utils {
+      display: flex;
+      font-size: 14px;
+
+      > div {
+        margin: 0 8px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        > span {
+          margin-left: 4px;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  > .images {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    gap: 8px;
+
+    > .column {
+      width: 50%;
+      height: 500px;
+
+      &.main {
+        > img {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+      }
+      &.quatro {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        > img {
+          width: 49%;
+          height: 50%;
+        }
+      }
+    }
+  }
+  > .main {
+    display: flex;
+
+    > .left {
+      width: 60%;
+
+      > .tags {
+        margin-top: 24px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      > .roomInfo {
+        font-size: 16px;
+        font-weight: 350;
+
+        > span {
+          position: relative;
+          margin: 4px;
+
+          &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -6px;
+            transform: translateY(-50%);
+            width: 2px;
+            height: 2px;
+            background-color: gray;
+            border-radius: 50%;
+          }
+        }
+      }
+      > .hostInfo {
+        display: flex;
+
+        > .thumbnail {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        > .meta {
+          margin-left: 16px;
+
+          > .name {
+            font-size: 16px;
+          }
+          > .career {
+            margin-top: 4px;
+            font-size: 14px;
+            color: gray;
+          }
+        }
+      }
+      > .features {
+        > .feature {
+          margin-top: 24px;
+          display: flex;
+          font-size: 16px;
+
+          > .meta {
+            margin-left: 24px;
+
+            > .title {
+              font-weight: bold;
+            }
+            > .description {
+              font-size: 14px;
+              margin-top: 6px;
+              color: gray;
+            }
+          }
+        }
+      }
+      > .intro {
+        font-size: 16px;
+        color: rgba(0, 0, 0, 0.7);
+
+        > .detail {
+          font-weight: bold;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      > .facilities {
+        > .title {
+          font-weight: 400;
+          font-size: 24px;
+        }
+        > .wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 24px;
+          gap: 16px;
+
+          > .facility {
+            display: flex;
+            width: 45%;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.8);
+            font-weight: 400;
+
+            > .name {
+              margin-left: 8px;
+            }
+          }
+        }
+        > .bottom {
+          margin-top: 32px;
+
+          > .button {
+            padding: 12px 24px;
+            border: 1px solid gray;
+            background-color: transparent;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    > .right {
+      display: flex;
+      justify-content: flex-end;
+      width: 40%;
+      padding-top: 48px;
+
+      > .card {
+        position: sticky;
+        top: 32px;
+        width: 320px;
+        height: min-content;
+        border-radius: 16px;
+        border: 1px solid lightgray;
+        box-shadow: 0px 0px 24px 0 lightgray;
+        padding: 24px;
+
+        > .price {
+          font-size: 20px;
+          font-weight: 500;
+
+          > .regular {
+            color: gray;
+            text-decoration: line-through;
+          }
+          > .discount {
+            margin-left: 8px;
+          }
+          > span:nth-child(3) {
+            margin-left: 8px;
+            font-weight: 400;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.8);
+          }
+        }
+        > .options {
+          margin-top: 24px;
+          border-radius: 8px;
+          border: 1px solid lightgray;
+          overflow: hidden;
+
+          > .check {
+            display: flex;
+            min-height: 48px;
+
+            > .in {
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              padding: 10px;
+              border-right: 1px solid lightgray;
+            }
+            > .out {
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              padding: 10px;
+            }
+          }
+          > .personnel {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-top: 1px solid lightgrey;
+          }
+          span {
+            font-size: 12px;
+          }
+          span:first-child {
+            font-weight: bold;
+          }
+        }
+        > .button {
+          margin-top: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 48px;
+          border-radius: 8px;
+          background-color: rgb(255, 56, 92);
+          color: white;
+          cursor: pointer;
+        }
+        > .group {
+          display: flex;
+          justify-content: space-between;
+          font-size: 14px;
+          font-weight: 350;
+          color: rgba(0, 0, 0, 0.8);
+
+          > span:first-child {
+            text-decoration: underline;
+          }
+        }
+        > .dayPrice {
+          margin-top: 24px;
+        }
+        > .commission {
+          margin-top: 16px;
+        }
+        > .totalPrice {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  > .hostIntro {
+    display: flex;
+
+    > .left {
+      width: 50%;
+      padding: 16px;
+
+      > .profile {
+        display: flex;
+
+        > .thumbnail {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        > .meta {
+          margin-left: 24px;
+          display: flex;
+          flex-direction: column;
+
+          > .host {
+            font-weight: 350;
+            font-size: 22px;
+          }
+          > .registeredDate {
+            font-size: 14px;
+            margin-top: 8px;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+      > .qualification {
+        display: flex;
+        margin-top: 16px;
+
+        > div {
+          span {
+            margin-left: 16px;
+          }
+        }
+        > div:not(:first-child) {
+          margin-left: 24px;
+        }
+      }
+    }
+    > .right {
+      width: 50%;
+      margin-top: 80px;
+      padding: 16px;
+      padding-left: 80px;
+      display: flex;
+      flex-direction: column;
+
+      > span:not(:first-child) {
+        margin-top: 16px;
+      }
+      > button {
+        margin-top: 32px;
+        padding: 8px 24px;
+        width: 200px;
+        font-weight: 500;
+        height: 40px;
+        border: 1px solid black;
+        background-color: transparent;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+  > .location {
+    margin-top: 12px;
+
+    > .title {
+      font-size: 22px;
+      font-weight: 400;
+    }
+  }
+  .bar {
+    margin: 24px 0;
+    height: 1px;
+    border-bottom: 1px solid lightgray;
+  }
+}
